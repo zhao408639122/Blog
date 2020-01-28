@@ -120,7 +120,7 @@ header:
     # In theme directory (source/images): /images/avatar.png
     # In site directory (source/uploads): /uploads/avatar.png
     # You can also use a link of image.
-    url: /image/assets/test7.jpg
+    url: https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/test7.jpg
     # Mask effect of the background image.
   mask:
     enable: false
@@ -234,7 +234,7 @@ author:
     # In theme directory (source/images): /images/avatar.png
     # In site directory (source/uploads): /uploads/avatar.png
     # You can also use a link of image.
-    url: /image/assets/mads.jpg
+    url: https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/mads.jpg
     # If true, the avatar would be displayed in a circle.
     rounded: false
     # The value should be chosen from 0 to 1.
