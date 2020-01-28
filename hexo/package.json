@@ -12,6 +12,7 @@
     "version": "4.2.0"
   },
   "dependencies": {
+    "cnpm": "^6.1.1",
     "core-js": "^3.6.4",
     "hexo": "^4.0.0",
     "hexo-generator-archive": "^1.0.0",
