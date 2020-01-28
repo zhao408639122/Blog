@@ -1,0 +1,862 @@
+# ---------------------------------------------------------------
+# Theme Core Configuration Settings
+# ---------------------------------------------------------------
+
+# Remove unnecessary files after hexo generate. Introduced in Stun v1.4.0
+shake_file: true
+
+# ---------------------------------------------------------------
+# SEO Settings
+# ---------------------------------------------------------------
+
+# If true, will add site-subtitle to index page.
+# Remember to set up your site-subtitle in Hexo `_config.yml`.
+index_subtitle: false
+
+# Webmaster tools verification setting
+# ---------------------------------------------------------------
+# Google Webmaster tools verification setting
+# See: https://www.google.com/webmasters/
+google_site_verification:
+
+# Bing Webmaster tools verification setting
+# See: https://www.bing.com/webmaster/
+bing_site_verification:
+
+# Baidu Webmaster tools verification setting
+# See: https://ziyuan.baidu.com/site/
+baidu_site_verification:
+
+# 360 Webmaster tools verification setting
+# see http://zhanzhang.so.com/
+qihu360_site_verification:
+
+# ---------------------------------------------------------------
+# Menu config
+# ---------------------------------------------------------------
+
+# Header navigation menu.
+# Value before `||` delimiter is the target link.
+# Value after `||` delimiter is the name of FontAwesome icon.
+# See: https://fontawesome.com/v4.7.0/icons/
+# If not set, "question-circle-o" icon will be shown.
+menu:
+  home: / || home
+  archives: /archives/ || folder-open
+  categories: /categories/ || th
+  tags: /tags/ || tags
+  about: /about/ || user
+  # xxx: /xxx/ || xxx
+  # You can add a secondary menu like follow.
+  # xxx: javascript:; || xxx
+
+# Secondary menu.
+submenu:
+  # Add item of secondary menu in here.
+  # xxx:
+  #   xx1: /xxx/ || xxx
+  #   xx2: /xxx/ || xxx
+
+menu_settings:
+  # Only show by icon.
+  icon_only: false
+  # Only show by text.
+  text_only: false
+
+# ---------------------------------------------------------------
+# Site config
+# ---------------------------------------------------------------
+
+favicon:
+  small: /image/assets/favicon-16x16.jpg
+  medium: /image/assets/favicon-32x32.jpg
+  # ! -----------------------------------------------------
+  # ! If you don't understand, please ignore the following.
+  # ! -----------------------------------------------------
+  # apple_touch_icon: /images/icons/apple-touch-icon.png
+  # safari_pinned_tab: /images/icons/logo-stun.svg
+  # msapplication: /images/icons/favicon-144x144.png
+
+# PWA
+# See: https://github.com/lavas-project/hexo-pwa/
+pwa:
+  enable: false
+  manifest: /manifest.json
+  theme_color: "#54bcff"
+
+# Whether to show the button of dark mode.
+night_mode:
+  enable: true
+  # The button of switching to the night mode.
+  button:
+    # Color of button.
+    color: "#fafafa"
+    # Background color of button.
+    bg_color: "#8c8a8a"
+  # The icon that stand for day and night.
+  icon:
+    dark: 🌜
+    light: 🌞
+
+# The layout for sidebar and content of site.
+layout:
+  # The width of the content area in website.
+  content: 768px
+  # The width of the sidebar in website.
+  sidebar: 300px
+  # The width between the content and the sidebar.
+  content_sidebar_gap: 30px
+  # The width between the main of website and the sides of page.
+  main_side_gap: 20px
+
+header:
+  # Header height (Support for all types of CSS size units).
+  height: 80%
+  # Header navigation bar height (Support for all types of CSS size units).
+  nav_height: 50px
+  # Background image in the header.
+  bg_image:
+    enable: true
+    # In theme directory (source/images): /images/avatar.png
+    # In site directory (source/uploads): /uploads/avatar.png
+    # You can also use a link of image.
+    url: /image/assets/test7.jpg
+    # Mask effect of the background image.
+  mask:
+    enable: false
+    # Opacity of mask (value: 0 ~ 1).
+    opacity: 0.5
+  # The icon that prompt to scroll down.
+  scroll_down_icon:
+    enable: true
+    animation: true
+
+# Creative Commons 4.0 International License.
+creative_commons:
+  enable: true
+  # Available: BY | BY-SA | BY-ND | BY-NC | BY-NC-SA | BY-NC-ND.
+  # For details, please see: https://creativecommons.org/share-your-work/licensing-types-examples/
+  license: BY-NC-SA
+  # Show the CC license in the sidebar.
+  sidebar: true
+  # Show the CC license at the post bottom.
+  post: true
+  # You can set a language value if you prefer a translated version of CC license.
+  # Valid values of language: en, zh, etc.
+  # If not set, "en" will be used by default.
+  language:
+
+# Back to top button.
+back2top:
+  enable: true
+  icon:
+    # Icon name in FontAwesome, see: https://fontawesome.com/v4.7.0/icons/
+    # `rocket` is recommended.
+    name: rocket
+    # Rotation Angle of icon.
+    rotate: -45deg
+    # Please use quote to wrap value (All CSS size units are supported).
+    color: "#49b1f5"
+    # Colour when the mouse hovers it.
+    hover_color: "#fc6423"
+
+# Footer of your site.
+footer:
+  # Background image in the footer.
+  bg_image:
+    enable: false
+    # In theme directory (source/images): /images/avatar.png
+    # In site directory (source/uploads): /uploads/avatar.png
+    # You can also use a link of image.
+    url:
+  # Mask effect of the background image.
+  mask:
+    enable: false
+    # Opacity of mask (value: 0 ~ 1).
+    opacity: 0.5
+  # Copyright information.
+  copyright:
+    enable: true
+    # If not set, will be used `author` from Hexo main config.
+    #   (e.g. liuyib. All Rights Reserved.)
+    text:
+    # Start time. If not set, the current year will be used.
+    since:
+    # End time. If not set, the current year will be used.
+    end:
+  # The icon between the copyright year and the owner.
+  icon:
+    enable: false
+    # Icon name in FontAwesome, see: https://fontawesome.com/v4.7.0/icons/
+    # `heart` is recommended with animation in red (#ff0000).
+    name: heart
+    # Heart beat animation.
+    animation: false
+    # Please use quote to wrap value (All CSS size units are supported).
+    color: "#ff0000"
+  # Hexo link (Powered by Hexo).
+  powered:
+    enable: true
+    # Version info of Hexo after Hexo link (e.g. vX.X.X).
+    version: true
+  # Theme info link (Theme - stun).
+  theme:
+    enable: true
+    # Version info of theme after theme info (e.g. vX.X.X).
+    version: true
+  # Beian icp information for Chinese users. see: http://www.miitbeian.gov.cn/
+  beian:
+    enable: false
+    # 备案 XXXXXXXX 号
+    icp:
+  # Any custom text (e.g. Hosted by <a href="https://pages.github.com/" rel="noopener" target="_blank">Github Pages</a>).
+  custom:
+    enable: false
+    text:
+
+# ---------------------------------------------------------------
+# Sidebar config
+# ---------------------------------------------------------------
+
+sidebar:
+  enable: true
+  # Sidebar position, available values: left | right.
+  position: right
+  # The distance from the top of the page when the sidebar is fixed (Only px units are supported).
+  offsetTop: 30px
+  # Horizon line.
+  horizon_line: false
+
+author:
+  enable: true
+  # Avatar in the sidebar.
+  avatar:
+    # In theme directory (source/images): /images/avatar.png
+    # In site directory (source/uploads): /uploads/avatar.png
+    # You can also use a link of image.
+    url: /image/assets/mads.jpg
+    # If true, the avatar would be displayed in a circle.
+    rounded: false
+    # The value should be chosen from 0 to 1.
+    opacity: 1
+    # Mouse hover animation, available value: turn | shake.
+    animation: shake
+  # Your favorite motto.
+  motto: To each his day is given
+
+# Social links.
+# Value before `||` delimiter is the target link.
+# Value after `||` delimiter is the name of FontAwesome icon.
+# See: https://fontawesome.com/v4.7.0/icons/
+# If you can`t find a suitable icon, you can choose to display the original
+#   text by adding the "origin" prefix (e.g. origin:sf, then "sf" will be show).
+social:
+  github: https://github.com/ || github
+  google: https://plus.google.com/ || google
+  twitter: https://twitter.com/ || twitter
+  # youtube: https://youtube.com/ || youtube
+  # segmentfault: https://segmentfault.com/ || origin:sf
+  weibo: https://weibo.com/ || weibo
+  zhihu: https://www.zhihu.com/ || origin:知
+  # wechat: yournumber || weixin
+  # telegram: yournumber || telegram
+  # qq: yournumber || qq
+  # xxx: xxx || (origin:)xxx
+
+social_setting:
+  enable: ture
+  # Only show by icon.
+  icon_only: true
+
+# Table Of Contents in the Sidebar.
+toc:
+  enable: true
+  # Automatically add list number to toc.
+  number: true
+  # If true, all words will be placed on the next lines when they overflow.
+  wrap: true
+  # If true, the toc of post will always be displayed, rather than the activated part of it.
+  expand_all: false
+  # Maximum heading depth of generated toc. You can set it in the
+  #   post through `toc_max_depth` in Front-matter.
+  # e.g. value: 3, will use h1~3 to generated toc.
+  max_depth: 4
+
+# Subscribe of email and rss.
+feed:
+  enable: false
+  # Enter your email subscription link (e.g. http://eepurl.com/guAE6j).
+  email:
+  # Enter the rss address of you set (e.g. /atom.xml).
+  # Dependencies: https://github.com/hexojs/hexo-generator-feed/
+  # Don't enable this before install dependencies
+  #   by `npm install hexo-generator-feed --save` in hexo directory.
+  rss:
+
+# The reading progress of post.
+reading_progress:
+  enable: true
+  # Please use the quote to wrap value (All CSS size units are supported).
+  color: "#fc6423"
+  # Support for all types of CSS size units.
+  height: 1px
+
+# ---------------------------------------------------------------
+# Page config
+# ---------------------------------------------------------------
+
+codeblock:
+  # The style of code block.
+  # values:
+  #   - default
+  #   - simple
+  #   - carbon
+  style: default
+  # The theme of code highlight.
+  # values:
+  #   - light
+  #   - dark
+  #   - ocean
+  highlight: light
+  # Whether the code to newline.
+  word_wrap: false
+
+# Add a line below h1, h2.
+heading_line: true
+
+# Reward
+reward:
+  enable: false
+  # Fill in your QR Code for collecting money.
+  alipay:
+  wechat:
+
+# ---------------------------------------------------------------
+# Post config
+# ---------------------------------------------------------------
+
+# The meta-information at the front of the post.
+post_meta:
+  # Only show by icon.
+  icon_only: false
+  # Show create information.
+  created:
+    enable: true
+    # Icon name in FontAwesome, see: https://fontawesome.com/v4.7.0/icons/
+    icon: calendar-o
+  # Show update information.
+  updated:
+    enable: true
+    # Icon name in FontAwesome, see: https://fontawesome.com/v4.7.0/icons/
+    icon: calendar-check-o
+  # Count the reading time of the post.
+  # Dependencies: https://github.com/willin/hexo-wordcount/
+  # Don't enable this before install dependencies
+  #   by `npm install hexo-wordcount --save` in hexo directory.
+  reading_time:
+    enable: false
+    # Icon name in FontAwesome, see: https://fontawesome.com/v4.7.0/icons/
+    icon: clock-o
+    # Set reading speed to estimate reading time.
+    speed:
+      # Reading speed of zh-CN.
+      zh: 200
+      # Reading speed of en-US.
+      en: 80
+  # Count the words of the post.
+  # Dependencies: https://github.com/willin/hexo-wordcount/
+  # Don't enable this before install dependencies
+  #   by `npm install hexo-wordcount --save` in hexo directory.
+  word_count:
+    enable: false
+    # Icon name in FontAwesome, see: https://fontawesome.com/v4.7.0/icons/
+    icon: file-word-o
+
+# The article list on the homepage or archives page.
+post_list:
+  # Whether to paginate.
+  paginate:
+    home: true
+    archives: false
+  # Whether to show the cover image of post.
+  cover_image:
+    home: false
+
+# The widget of post.
+post_widget:
+  # Show tags at the bottom of the post.
+  tags: true
+  # Show "post end" at the bottom of the post.
+  end_text:
+    enable: true
+    # Show the horizon line before the text of the end.
+    horizon_line: true
+
+# Automatically retain article excerpt.
+auto_excerpt:
+  enable: false
+  length: 150
+
+# Stick post to the top.
+# Dependencies: https://github.com/netcan/hexo-generator-index-pin-top/
+# Don't enable this before install dependencies
+#   by `npm install hexo-generator-index-pin-top --save` in hexo directory.
+stick_top:
+  # Position of icon, available values: left | right.
+  position: right
+  # Icon name in FontAwesome, see: https://fontawesome.com/v4.7.0/icons/
+  icon: thumb-tack
+  # Rotation Angle of icon.
+  rotate: 45deg
+  # Please use the quote to wrap value (All CSS size units are supported).
+  color: "#999"
+
+# ---------------------------------------------------------------
+# Comment config
+# ---------------------------------------------------------------
+
+# Gittalk
+# See: https://github.com/gitalk/gitalk/
+gitalk:
+  enable: false
+  # Github username.
+  owner:
+  # Github repository.
+  repo:
+  # Github Application Client ID.
+  client_id:
+  # Github Application Client Secret.
+  client_secret:
+  # GitHub repo owner and collaborators, only these guys can initialize github issues.
+  admin:
+  # Facebook-like distraction free mode.
+  distraction_free_mode: false
+  # Gitalk's display language depends on user's browser or system environment.
+  # If you want everyone visiting your site to see a uniform language,
+  #   you can set a force language value.
+  # Available values: en, zh-CN, es-ES, fr, ru, zh-TW.
+  language:
+
+# Valine
+# See: https://valine.js.org/quickstart.html
+valine:
+  enable: false
+  # Your leancloud application appid.
+  appid:
+  # Your leancloud application appkey.
+  appkey:
+  # Mail notifier.
+  notify: true
+  # Verification code.
+  verify: true
+  # Comment box placeholder.
+  placeholder: Just go go
+  # Gravatar style.
+  avatar: mp
+  # Custom comment header.
+  meta: nick,mail,link
+  # Pagination size.
+  pageSize: 10
+  # Article reading statistics.
+  visitor: false
+  # Whether to record the commenter IP.
+  recordIP: false
+  # language, available values: en, zh-cn.
+  language:
+
+# Livere
+# See: https://www.livere.com/
+livere:
+  enable: false
+  uid:
+
+# Disqus
+# See: https://disqus.com/
+disqus:
+  enable: false
+  shortname:
+  count: true
+
+# Utterances
+# See: https://utteranc.es/
+utterances:
+  enable: false
+  # Github username.
+  owner:
+  # Github repository.
+  repo:
+  # Choose the mapping between blog posts and GitHub issues.
+  # Available values: pathname | url | title | og:title
+  mapping: title
+  # Choose the label that will be assigned to issues created by Utterances.
+  # Emoji are supported in label names.
+  label: utterances
+  # Choose an Utterances theme that matches your blog.
+  # Available values: github-light | github-dark | github-dark-orange | icy-dark | dark-blue | photon-dark
+  theme: github-light
+  # ! -------------------------------------------------------------------------------
+  # ! Don't set this unless the URL of the script in the official website is changed.
+  # ! -------------------------------------------------------------------------------
+  script_url: https://utteranc.es/client.js
+
+# ---------------------------------------------------------------
+# Statistics and Analytics config
+# ---------------------------------------------------------------
+
+# Busuanzi statistics
+# See: https://busuanzi.ibruce.info/
+busuanzi:
+  enable: false
+  # Only show by icon.
+  icon_only: false
+  # Number of unique visitor to the entire site.
+  site_uv:
+    enable: true
+    # Icon name in FontAwesome, see: https://fontawesome.com/v4.7.0/icons/
+    icon: user
+  # Number of page view to the entire site.
+  site_pv:
+    enable: true
+    icon: eye
+  # Number of page view to a post.
+  post_pv:
+    enable: true
+    icon: eye
+
+# Google analytics ID
+# See: https://analytics.google.com/
+google_analytics:
+
+# Baidu analytics ID
+# See: https://tongji.baidu.com/
+baidu_analytics:
+
+# Tencent analytics ID
+# See: https://v2.ta.qq.com/
+tencent_analytics:
+
+# ---------------------------------------------------------------
+# Search config
+# ---------------------------------------------------------------
+
+# Algolia Search
+# Dependencies: https://github.com/algolia/instantsearch.js/
+algolia_search:
+  enable: false
+  hits:
+    # Number of search results displayed per page.
+    per_page: 10
+  labels:
+    # Whether to show stats of search.
+    show_stats: true
+
+# Local Search
+# See: https://github.com/wzpan/hexo-generator-search/
+local_search:
+  enable: false
+
+# ---------------------------------------------------------------
+# Background config
+# ---------------------------------------------------------------
+
+# Canvas-ribbon
+# Dependencies: https://github.com/hustcc/ribbon.js
+canvas_ribbon:
+  enable: false
+  # The width of the ribbon.
+  size: 120
+  # The transparency of the ribbon.
+  alpha: 0.6
+  # The display level of the ribbon.
+  zIndex: -1
+
+# Canvas-nest
+# Dependencies: https://github.com/hustcc/canvas-nest.js
+canvas_nest:
+  enable: false
+  # Display on mobile or not
+  onmobile: true
+  # RGB values, use "," to separate
+  # Color for lines
+  color: "0,0,0"
+  # The opacity of line: 0 ~ 1
+  opacity: 0.6
+  # The number of lines
+  count: 99
+  # z-index property of the background
+  zIndex: -1
+
+# ---------------------------------------------------------------
+# Math and Chart config
+# ---------------------------------------------------------------
+math:
+  enable: false
+
+  # Only the page which has `math: true` in Front-matter will render.
+  # If true, it will load mathjax / katex srcipt EVERY PAGE.
+  per_page: false
+
+  # value: mathjax / katex (suggest: katex)
+  engine: katex
+
+  # See: https://github.com/mathjax/MathJax/
+  # hexo-renderer-kramed (or hexo-renderer-markdown-it-plus or hexo-renderer-pandoc) needed to full MathJax support.
+  mathjax:
+    cdn: https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+    # See: https://mhchem.github.io/MathJax-mhchem/
+    mhchem:
+      enable: false
+      mhchem_js: https://cdn.jsdelivr.net/npm/mathjax-mhchem@3.3.2/mhchem.min.js
+
+  # hexo-renderer-markdown-it-plus (or hexo-renderer-markdown-it with markdown-it-katex plugin) needed to full Katex support.
+  katex:
+    cdn: https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css
+
+    copy_tex:
+      # See: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex
+      enable: true
+      copy_tex_js: https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/copy-tex.min.js
+      copy_tex_css: https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/copy-tex.css
+
+# ---------------------------------------------------------------
+# Other config
+# ---------------------------------------------------------------
+
+# Fancybox
+# See: https://fancyapps.com/fancybox/3/
+fancybox: false
+
+# Whether to enlarge the image when clicked.
+zoom_image:
+  enable: true
+  # The color of mask.
+  # Please use the quote to wrap value (All CSS size units are supported).
+  mask_color: "rgba(0,0,0,0.6)"
+
+# If you are use "photos" attribute in the Front-matter,
+#   you can enable this to show images in waterfalls flow.
+# See: https://github.com/desandro/masonry/
+gallery_waterfall:
+  enable: false
+  col_width: 220px
+  gap_x: 10px
+  gap_y: 10px
+
+# Lazy load the images of post.
+# See: https://github.com/tuupola/lazyload
+lazyload:
+  enable: false
+  # Available values: gif | block
+  placeholder: gif
+
+# Quicklink support
+# See: https://github.com/GoogleChromeLabs/quicklink/
+quicklink:
+  enable: false
+  # Quicklink (quicklink.umd.js script) is loaded on demand.
+  # Add `quicklink: true` in Front-matter of the page or post you need.
+  # Home page and archive page can be controlled through home and archive options below.
+  home: true
+  archive: true
+  # Initialize quicklink after the load event fires.
+  delay: true
+  # Custom a time in milliseconds by which the browser must execute prefetching.
+  timeout: 10000
+  # Enable fetch() or falls back to XHR.
+  priority: true
+  # For more flexibility you can add some patterns (RegExp, Function, or Array) to ignores.
+  # See: https://github.com/GoogleChromeLabs/quicklink#custom-ignore-patterns
+  # ! ---------------------------------------------------------------
+  # ! If you don't understand, please ignore the following.
+  # ! ---------------------------------------------------------------
+  ignores:
+    - /\/api\/?/
+    - uri => uri.includes('.xml')
+    - uri => uri.includes('.zip')
+    - (uri, el) => el.hasAttribute('nofollow')
+    - (uri, el) => el.hasAttribute('noprefetch')
+
+# Pjax
+# See: https://github.com/MoOx/pjax/
+pjax:
+  enable: false
+  # Scrolling to the second screen when the page loaded.
+  scrollTo2screen: false
+  # ! -----------------------------------------------------
+  # ! If you don't understand, please ignore the following.
+  # ! -----------------------------------------------------
+  # Please see: https://github.com/MoOx/pjax/#options
+  elements:
+  selectors:
+  switches:
+  switchesOptions:
+  history: true
+  # If you enable this, you must set `scrollTo2screen: false` firstly.
+  scrollTo: false
+  scrollRestoration: false
+  cacheBust: false
+  debug: false
+  currentUrlFullReload: false
+  timeout: 0
+
+# Google AdSense
+google_adsense:
+  enable: false
+  js_src: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
+  client:
+  enable_page_level_ads: true
+
+# The links with `target="_blank"` attribute.
+external_link:
+  # Adding an icon make it easier for users to know that this is an external link.
+  icon:
+    enable: true
+    # Icon name in FontAwesome, see: https://fontawesome.com/v4.7.0/icons/
+    # `external-link` is recommended.
+    name: external-link
+    # Please use the quote to wrap value (All CSS size units are supported).
+    color: "#aaa"
+
+# The shortcuts of the site.
+shortcuts:
+  # Switch to the prev / next post by key.
+  # "Ctrl + ←" is the shortcuts to prev post.
+  # "Ctrl + →" is the shortcuts to next post.
+  switch_post:
+    enable: false
+
+# Tag cloud
+# If not used, comment it or ignore it.
+tag_cloud:
+  # Color for tag (please use the quote to wrap value, only support HEX).
+  start_color: "#a4d8fa"
+  end_color: "#49b1f5"
+  # Size for tag.
+  min_size: 16
+  max_size: 26
+  # Maximum number of tags displayed. Change it if you have more than 200 tags.
+  max_amount: 200
+
+# Assets
+# In theme directory (source/css).
+css: css
+# In theme directory (source/js).
+js: js
+# In theme directory (source/images).
+images: images
+
+# The common prefix of the FontAwesome icon.
+# Using "fa" prefix in version 4.
+# Using "fas | far | fal | fad | fab" prefix in version 5.
+fa_prefix: fa
+
+# Set a CDN address for the vendor you want to customize.
+# ! -----------------------------------------------------
+# ! Do not edit the follow configs.
+# ! Unless you know what you are doing.
+# ! -----------------------------------------------------
+cdn:
+  # Using version: 4.7.0
+  # See: https://fontawesome.com/
+  # Example:
+  # fontawesome: //cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css
+  # fontawesome: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.10.2/css/all.min.css
+  # fontawesome: //cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
+  # fontawesome: //cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css
+  fontawesome:
+
+  # Using version: 3.4.1
+  # Example:
+  # jquery: //cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js
+  # jquery: //cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js
+  jquery:
+
+  # Using version: 1.5.2
+  # See: http://velocityjs.org/
+  # Example:
+  # velocity: //cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js
+  # velocity: //cdnjs.cloudflare.com/ajax/libs/velocity/1.5.2/velocity.min.js
+  # velocity_ui: //cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js
+  # velocity_ui: //cdnjs.cloudflare.com/ajax/libs/velocity/1.5.2/velocity.ui.min.js
+  velocity:
+  velocity_ui:
+
+  # gitalk & js-md5
+  # Using version: latest & latest
+  # See: https://github.com/gitalk/gitalk/, https://github.com/emn178/js-md5/
+  # Example:
+  # gitalk_js: //cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js
+  # gitalk_css: //cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.css
+  # md5: //cdn.jsdelivr.net/npm/js-md5@latest/src/md5.min.js
+  gitalk_js:
+  gitalk_css:
+  gitalk_md5:
+
+  # valine & leancloud-storage
+  # Using version: latest & latest
+  # See: https://github.com/xCss/Valine/, https://www.npmjs.com/package/leancloud-storage/
+  # Example:
+  # valine: //cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js
+  # leancloud_storage: //cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js
+  valine:
+  leancloud_storage:
+
+  # busuanzi
+  # Using version: latest
+  # See: https://busuanzi.ibruce.info/
+  # Example:
+  # busuanzi: //cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js
+  busuanzi:
+
+  # Using version: 2.1.1
+  # See: https://busuanzi.ibruce.info/
+  # Example:
+  # instantsearch_js: //cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.js
+  # instantsearch_css: //cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.css
+  instantsearch_js:
+  instantsearch_css:
+
+  # Using version: latest
+  # See: https://github.com/hustcc/ribbon.js
+  # Example:
+  # canvas_ribbon: //cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js
+  canvas_ribbon:
+
+  # Using version: latest
+  # See: https://github.com/hustcc/canvas-nest.js
+  # Example:
+  # canvas_nest: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@latest/canvas-nest.min.js
+  canvas_nest:
+
+  # Using version: 3.5.7
+  # See: https://www.fancyapps.com/fancybox/3/
+  # Example:
+  # fancybox_js: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js
+  # fancybox_css: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css
+  fancybox_js:
+  fancybox_css:
+
+  # Using version: 4.2.2
+  # See: https://masonry.desandro.com/
+  # Example:
+  # masonry: //cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js
+  masonry:
+
+  # Using version: 2.0.0-rc.2
+  # See: https://github.com/tuupola/lazyload/
+  # Example:
+  # lazyload: //cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js
+  lazyload:
+
+  # Using version: latest
+  # See: https://github.com/GoogleChromeLabs/quicklink/
+  # Example:
+  # quicklink: //cdn.jsdelivr.net/npm/quicklink@latest/dist/quicklink.umd.js
+  quicklink:
+
+  # Using version: latest
+  # See: https://github.com/MoOx/pjax/
+  # Example:
+  # pjax: //cdn.jsdelivr.net/npm/pjax@latest/pjax.min.js
+  pjax:
