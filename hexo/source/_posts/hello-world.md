@@ -22,6 +22,8 @@ $ hexo server
 
 More info: [Server](https://hexo.io/docs/server.html)
 
+<!-- more -->
+
 ### Generate static files
 
 ``` bash
@@ -37,3 +39,4 @@ $ hexo deploy
 ```
 
 More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+

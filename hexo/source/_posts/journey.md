@@ -1,7 +1,7 @@
 ---
 title: 人世风灯，向死而生
 date: 2019-07-13 16:18:20
-top_image: https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/2019071301.jpg
+top_image: https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/test6.jpg
 tags: 
 ---
 
@@ -16,6 +16,8 @@ tags:
 打开游戏首先是穿着兜帽长袍的的旅人在沙漠中醒来，爬上眼前的沙丘，眺望远方，游戏主界面的面板也浮现在屏幕上方。游戏的操作十分简单，除方向键以外，只有短时间飞行与小范围与环境互动两个操作，通过收集一个个符文获得更长的飞行时间，找到通往山顶的路。	
 
 在Gameplay方面有两个亮点，第一个是滑沙操作，当在沙漠中顺着沙行走或者从高处向底处移动时，显然按照常理来说移动速度是应该增快的，当你的速度达到一定速度时就会开始滑沙。一方面滑沙操作丰富了游戏内容，我玩的时候就特别喜欢滑沙，玩家能够作为旅人体验在无垠的沙漠“奔跑的感觉”使我特别满足；另一方面这个操作一定程度上也控制了游戏节奏，进入海底时和在沙漠释放被封印的符文时两个速度变化很明显的部分是很好的例子。	
+
+<!-- more -->
 
 <img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/2019071302.jpg" style="zoom:50%;" />
 

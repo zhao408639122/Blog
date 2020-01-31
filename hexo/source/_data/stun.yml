@@ -562,7 +562,7 @@ local_search:
 # Canvas-ribbon
 # Dependencies: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
-  enable: true
+  enable: false
   # The width of the ribbon.
   size: 120
   # The transparency of the ribbon.
@@ -653,7 +653,7 @@ lazyload:
 # Quicklink support
 # See: https://github.com/GoogleChromeLabs/quicklink/
 quicklink:
-  enable: false
+  enable: true
   # Quicklink (quicklink.umd.js script) is loaded on demand.
   # Add `quicklink: true` in Front-matter of the page or post you need.
   # Home page and archive page can be controlled through home and archive options below.
