@@ -251,17 +251,17 @@ author:
 # If you can`t find a suitable icon, you can choose to display the original
 #   text by adding the "origin" prefix (e.g. origin:sf, then "sf" will be show).
 social:
-  github: https://github.com/ || github
-  google: https://plus.google.com/ || google
-  twitter: https://twitter.com/ || twitter
+  github: https://github.com/zhao408639122 || github
+  # google: https://plus.google.com/ || google
+  # twitter: https://twitter.com/ || twitter
   # youtube: https://youtube.com/ || youtube
   # segmentfault: https://segmentfault.com/ || origin:sf
-  weibo: https://weibo.com/ || weibo
-  zhihu: https://www.zhihu.com/ || origin:知
+  weibo: https://weibo.com/u/5347549900?is_hot=1 || weibo
+  zhihu: https://www.zhihu.com/people/cnzyh || origin:知
   # wechat: yournumber || weixin
   # telegram: yournumber || telegram
   # qq: yournumber || qq
-  # xxx: xxx || (origin:)xxx
+  instagram: https://www.instagram.com/cloverzyh/ || instagram
 
 social_setting:
   enable: ture
@@ -380,7 +380,7 @@ post_list:
     archives: false
   # Whether to show the cover image of post.
   cover_image:
-    home: false
+    home: true
 
 # The widget of post.
 post_widget:
@@ -395,7 +395,7 @@ post_widget:
 # Automatically retain article excerpt.
 auto_excerpt:
   enable: false
-  length: 150
+  length: 300 
 
 # Stick post to the top.
 # Dependencies: https://github.com/netcan/hexo-generator-index-pin-top/
@@ -562,7 +562,7 @@ local_search:
 # Canvas-ribbon
 # Dependencies: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
-  enable: false
+  enable: true
   # The width of the ribbon.
   size: 120
   # The transparency of the ribbon.
@@ -680,7 +680,7 @@ quicklink:
 # Pjax
 # See: https://github.com/MoOx/pjax/
 pjax:
-  enable: false
+  enable: true
   # Scrolling to the second screen when the page loaded.
   scrollTo2screen: false
   # ! -----------------------------------------------------
