@@ -590,7 +590,7 @@ canvas_nest:
 # Math and Chart config
 # ---------------------------------------------------------------
 math:
-  enable: false
+  enable: true
 
   # Only the page which has `math: true` in Front-matter will render.
   # If true, it will load mathjax / katex srcipt EVERY PAGE.
@@ -682,7 +682,7 @@ quicklink:
 pjax:
   enable: true
   # Scrolling to the second screen when the page loaded.
-  scrollTo2screen: false
+  scrollTo2screen: false  
   # ! -----------------------------------------------------
   # ! If you don't understand, please ignore the following.
   # ! -----------------------------------------------------
