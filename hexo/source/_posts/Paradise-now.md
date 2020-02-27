@@ -3,6 +3,7 @@ title: 假如天堂不再
 date: 2019-08-17 20:26:51
 top_image: https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/1677778.jpg
 tags:
+categories: 看点猫片
 ---
 
 > 《天堂此时》这部电影的座右铭会像所有现实主义电影一样：”事实就是如此！”电影影像与日常生活的现实相似，因此电影内在的世界和导演探索的外在环境几何对应。

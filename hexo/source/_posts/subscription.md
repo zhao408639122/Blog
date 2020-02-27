@@ -1,6 +1,7 @@
 ---
 title: 订阅服务记录
 date: 2020-02-17 08:57:54
+categories: 无交易，搞点内鬼
 tags:
 math: true
 ---

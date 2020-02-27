@@ -1,7 +1,9 @@
 ---
 title: 人世风灯，向死而生
 date: 2019-07-13 16:18:20
-top_image: https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/test6.jpg
+top_image: 
+categories: 欢声笑语打出GG
+https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/test6.jpg
 tags: 
 ---
 

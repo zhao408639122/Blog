@@ -4,6 +4,7 @@ date: 2019-10-27 20:56:05
 top_image: https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/2019102705.jpg
 excerpt: '十月以来一直浑浑噩噩的，经过一个周的国庆假期适应了慵懒的环境，没有了之前那样学习和工作的动力了，这三个周打了五十把LOL，心里有改变的想法又没有动力去改变现在的生活状态，核聚变其实也是一个契机吧，走出现在的生活状态出去走走看看，也能有机会认识新朋友。'
 tags:
+categories: 欢声笑语打出GG
 ---
 
 <img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/2019102701.jpg" style="zoom: 67%;" />
