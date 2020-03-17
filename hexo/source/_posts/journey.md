@@ -4,7 +4,7 @@ date: 2019-07-13 16:18:20
 top_image: 
 categories: 欢声笑语打出GG
 https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/test6.jpg
-tags: 
+tags:
 ---
 
 > 文章有部分来自卡姐翻译的视频： [The Story Hidden in Journey’s Music | Game Score Fanfare](https://www.bilibili.com/video/av50611708)
