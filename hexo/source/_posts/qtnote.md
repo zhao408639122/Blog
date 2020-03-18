@@ -9,7 +9,7 @@ tags:
 
 ## 环境配置
 
-在[官网](http://download.qt.io/archive/qt/)就可以下载，同时清华和华科都有QT的镜像，考虑到并不会使用QT开发大型项目，基本不会用到什么新特性，我下载的5.12.3版本，下载安装后会附带四个开发工具.
+在[官网](http://download.qt.io/archive/qt/)就可以下载，同时清华和华科都有QT的镜像，考虑到并不会使用QT开发大型项目，基本不会用到什么新特性，我下载的5.12.3版本，下载安装后会附带四个开发工具。
 
 + QT creator 文本编辑器
 + QT designer UI可视化编辑器
@@ -32,7 +32,7 @@ QT的两个基本库是QTcore和QTgui
 
 ### MOC与qmake
 
-QT是可以跨平台的GUI框架，在C++环境下，编译前将会先使用MOC(Meta-Object-Compiler，好像是元对象编译器)进行编译，元对象是QT的语言特性之一，QT中会包含了各种宏，比如Q_OBJECT等，使用MOC先将宏编译后再使用C++进行编译。
+QT是可以跨平台的GUI框架，在C\++环境下，编译前将会先使用MOC(Meta-Object-Compiler，好像是元对象编译器)进行编译，元对象是QT的语言特性之一，QT中会包含了各种宏，比如Q_OBJECT等，使用MOC先将宏编译后再使用C\++进行编译。
 
 为了省点事，QT也提供了qmake生成makefile。
 
@@ -74,7 +74,14 @@ QT引进了槽函数机制，
 	if (reply == QMessageBox::Yes) {}
 ```
 
+### QPlainTextEdit
 
+使用QPlainTextEdit创造可编辑的文本区域
+
+#### plainText：Qstring
+
++ 该成员为文本，使用**ToPlainText()**得到本文
++ 使用**setPlainText(const Qstring &text)**修改文本。
 
 ## 可视化设计
 
