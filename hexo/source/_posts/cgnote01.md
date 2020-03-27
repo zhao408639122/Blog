@@ -1,5 +1,5 @@
 ---
-title: Computer Graphic笔记(一)——变换与采样
+title: Computer Graphic笔记(一)——变换与光栅化
 date: 2020-03-10 15:45:25
 tags:
 categories: 计算机图形学
@@ -182,7 +182,7 @@ $$
 
 采样率越稀疏，傅里叶变换到频谱上越密集
 
-<img src="C:\Users\40863\AppData\Roaming\Typora\typora-user-images\image-20200320185704540.png" alt="image-20200320185704540" style="zoom: 67%;" />
+<img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200327155949.png" alt="image-20200320185704540" style="zoom: 67%;" />
 
 采样不够密集，就会发生走样，用三角形的例子，采样像素少，频谱上就会发生重叠，就会发生走样。
 
@@ -194,7 +194,7 @@ $$
 
 把高通滤波拿掉，然后进行采样
 
-<img src="C:\Users\40863\AppData\Roaming\Typora\typora-user-images\image-20200320190025617.png" alt="image-20200320190025617" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200327155959.png" alt="image-20200320190025617" style="zoom:67%;" />
 
 ### MSAA
 
