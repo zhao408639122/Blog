@@ -1,7 +1,7 @@
 ---
 title: 后缀数组
 date: 2019-07-27 20:39:55
-categories: 简单且枯燥
+categories: 
 tags:
 ---
 

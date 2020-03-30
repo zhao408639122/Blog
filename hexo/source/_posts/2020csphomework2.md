@@ -1,7 +1,7 @@
 ---
 title: 程序设计思维与实践 Week2 作业
 date: 2020-02-27 09:30:30
-categories: 简单且枯燥
+categories: 
 tags:
 ---
 
