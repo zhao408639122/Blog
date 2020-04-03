@@ -52,6 +52,16 @@ QT引进了槽函数机制，
 
 ## 类与API
 
+### QLabel 
+
+```cpp
+	QLabel *label = new QLabel("Hello World");//构造函数
+	label -> setWindowTitle("my")
+    label -> show();
+```
+
+
+
 ### QMessageBox
 
 使用MessageBox作为弹出窗口
@@ -83,6 +93,17 @@ QT引进了槽函数机制，
 
 + 该成员为文本，使用**ToPlainText()**得到本文
 + 使用**setPlainText(const Qstring &text)**修改文本。
+
+### Qpixmap
+
+使用Qpixmap来添加图片，需要include\<Qpixmap>库
+
+```cpp
+	Qpixmap pix("filepositon");
+	ui -> lable_pix -> setPixmap(pix.scaled(100, 100, Qt::keepAspectRatio));
+```
+
+
 
 ## 可视化设计
 
