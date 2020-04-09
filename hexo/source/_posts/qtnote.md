@@ -91,7 +91,7 @@ QT引进了槽函数机制，
 
 #### plainText：Qstring
 
-+ 该成员为文本，使用 **ToPlainText() ** 得到本文
++ 该成员为文本，使用 **ToPlainText()** 得到本文
 + 使用 **setPlainText(const Qstring &text)** 修改文本。
 
 ### Qpixmap
