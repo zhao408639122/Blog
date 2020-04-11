@@ -12,6 +12,14 @@ math: true
 
 # Transformation
 
+## Homogeneous Coordinates
+
+使用齐次坐标的原因，在进行仿射变换时，不饿能直接时用矩阵来进行变换。
+
+### Affine Transformation
+
+仿射变换，实质上就是平移变换， 也可以理解为对原点的变换。
+
 ## 3D Transformations
 
 ### Rotation transformation
@@ -23,6 +31,8 @@ math: true
 ![image-20200310143409841](https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200318085300.png)
 
 默认沿着某个轴的方向旋转，默认轴是过原点的，方向是n的方向，角度为$\alpha$。
+
+***推导**
 
 <!-- more -->
 
