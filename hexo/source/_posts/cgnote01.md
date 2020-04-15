@@ -26,17 +26,17 @@ math: true
 
 ![image-20200310142500583](https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200318084811.png)
 
-### Rodrigues‘ Rotation Formula
+### Rodrigues Rotation Formula
 
 ![image-20200310143409841](https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200318085300.png)
 
 默认沿着某个轴的方向旋转，默认轴是过原点的，方向是n的方向，角度为$\alpha$。
 
-***推导**
+***推导** ：放在了四元数的文档中。
 
 <!-- more -->
 
-#### *四元数
+#### *四元数：已补充
 
 ## Viewing transformation  
 

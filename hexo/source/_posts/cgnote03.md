@@ -34,6 +34,8 @@ math: true
 
 <img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200411123324.png" alt="image-20200411114845161" style="zoom: 33%;" />
 
+<!-- more -->
+
 #### 距离函数SDF
 
 空间的点到想要表示的几何形体上的点的最小距离。
