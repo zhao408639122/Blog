@@ -120,8 +120,8 @@ $$
 
 将旋转分解为对沿坐标轴水平与垂直方向的旋转
 $$
-v‘ = v’_\parallel +v'_\perp\\
-v'_\parallel=v_\parallel=proj_u(v)=\frac{u\cdot v}{u \cdot u} u=(u\cdot v)u\\
+v'= v'_\parallel + v'_\perp \\
+v'_\parallel=v_\parallel=proj_u(v) = \frac{u\cdot v}{u \cdot u} u=(u\cdot v)u\\
 v_\perp=v-(u \cdot v)u
 $$
 对于平行于旋转轴u的操作其实没有被旋转，因为在四维空间中沿旋转轴的旋转被标识为轴的旋转，投影在三维空间中形状不变。
@@ -274,7 +274,10 @@ $$
 
 依然将旋转分解，将向量定义为纯四元数。
 $$
-v = [0,\mathbf v] \qquad \qquad v′ = [0,\mathbf {v′]}\\ v_⊥ = [0,\mathbf{v_\perp}]\qquad\qquad v′_⊥ = [0,\mathbf{v′_\perp}]\\ v_\| = [0,\mathbf v_\|] \qquad\qquad v′_\| = [0,\mathbf {v′_\|}] \\u = [0,\mathbf u] \qquad\qquad\qquad\qquad\ \
+v = [0,\mathbf v] \qquad \qquad v' = [0,\mathbf {v']} \\
+v_\perp = [0,\mathbf{v_\perp}] \qquad\qquad v'_\perp =[0,\mathbf{v'_\perp}]\\ 
+v_\| = [0,\mathbf v_\|] \qquad\qquad v'_\| = [0,\mathbf {v'_\|}] \\
+u = [0,\mathbf u] \qquad\qquad\qquad\qquad \enspace \;
 $$
 于是可以得到：
 $$
@@ -333,7 +336,7 @@ $$
 v' = v_\| + qv_\perp \qquad \qquad \qquad \qquad\qquad\qquad \qquad \qquad\qquad\qquad\qquad\qquad\enspace\; \\
 = pp^{-1}v_\| + ppv_\perp \qquad\qquad (q = p ^ 2 \implies p = [cos(\frac 1 2\theta),sin(\frac 1 2\theta)\mathbf u] \ )
 $$
-**Lemma 2**  设$v_\|=[0, \mathbf v_\|]$为一个纯四元数，而$q=[\alpha,\beta\mathbf u]$，其中$\mathbf u $为单位向量，$\alpha,\beta \in \Reals$，若$\mathbf v_\|$平行与$\mathbf u$，则$qv_\|=v_\|q$.
+**Lemma 2**  设 $v_\|=[0, \mathbf v_\|]$ 为一个纯四元数，而 $q=[\alpha,\beta\mathbf u]$ ，其中 $\mathbf u $ 为单位向量，$\alpha,\beta \in \Reals$，若 $\mathbf v_\|$ 平行于 $\mathbf u$ ，则$qv_\|=v_\|q$.
 
 **Lemma 3** 设$v_\perp=[0, \mathbf v_\perp]$为一个纯四元数，而$q=[\alpha ,\beta \mathbf u]$，其中$\mathbf u$为单位向量，$\alpha,\beta \in \Reals$，若$v_\perp$正交与$\mathbf u$，则$qv_\perp = v_\perp q^*$.
 
