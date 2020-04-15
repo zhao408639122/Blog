@@ -129,12 +129,14 @@ $$
 定义垂直与两个相互垂直并且与$u$垂直的向量$v'_\perp,w$，$w$可以使用$u,v'_\perp$求得，并使用两个向量合成垂直方向上的旋转。
 
 <img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200415182614.png" alt="image-20200414234010087" style="zoom: 67%;" />
+
 $$
 w=u\times v_\perp\\
 \|w\|=\|u\times v_\perp\|\\
 \qquad\qquad\qquad\quad =\|u\| \cdot\|v_\perp\|*sin(\pi/2)\\
-\!=\|v_\perp\|\\
-v'_\perp=v'_v+v'_w=cos(\theta)v_\perp+sin(\theta)w\\=cos(\theta)v_\perp+sin(\theta)(u\times v_\perp)
+\! =\|v_\perp\| \\
+v'_\perp=v'_v+v'_w=cos(\theta)v_\perp+sin(\theta)w\\
+=cos(\theta)v_\perp+sin(\theta)(u\times v_\perp)
 $$
 
 ### 2.2 v的旋转
@@ -284,7 +286,9 @@ $$
 v=v_\|+v_\perp \qquad \qquad v'=v'_\|+v'_\perp
 $$
 
-#### 3.2.1 $v_\perp$的旋转
+#### 3.2.1 
+
+$v_\perp$的旋转
 
 在上文推到的式子有：
 $$
@@ -294,7 +298,7 @@ $$
 $$
 uv_\perp = [-\mathbf u \cdot \mathbf v_\perp, \mathbf u \times \mathbf v_\perp]
 $$
-因为$\mathbf v_\perp$正交与$\mathbf u$，所以
+因为$\mathbf v_\perp$正交与$\mathbf u$，所以                       
 $$
 uv_\perp = [0, \mathbf u \times \mathbf v_\perp] = \mathbf u \times \mathbf v_\perp
 $$
@@ -310,14 +314,16 @@ q = [cos(\theta), sin(\theta)\mathbf u]
 $$
 而且q的模长为1，不会对原变量进行缩放，只会进行旋转。
 
-#### 3.2.2 $v_\|$的旋转
+#### 3.2.2 
+
+$v_\|$的旋转
 
 由2.1中式子可得
 $$
 v'_\|=v_\|
 $$
 
-#### 3.2.3 $v$ 的旋转
+#### 3.2.3 v 的旋转
 
 将上面结果相加可得
 $$
