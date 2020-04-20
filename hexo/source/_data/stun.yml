@@ -206,9 +206,9 @@ footer:
     version: true
   # Beian icp information for Chinese users. see: http://www.miitbeian.gov.cn/
   beian:
-    enable: false
-    # 备案 XXXXXXXX 号
-    icp:
+    enable: true
+    # 备�?? XXXXXXXX �?
+    icp: <span class="beian"><a href="http://beian.miit.gov.cn" title="工信部首页" target="_blank" rel="noopener" data-pjax-state="">鲁ICP备19036175号</a></span>
   # Any custom text (e.g. Hosted by <a href="https://pages.github.com/" rel="noopener" target="_blank">Github Pages</a>).
   custom:
     enable: false
@@ -257,7 +257,7 @@ social:
   # youtube: https://youtube.com/ || youtube
   # segmentfault: https://segmentfault.com/ || origin:sf
   weibo: https://weibo.com/u/5347549900?is_hot=1 || weibo
-  zhihu: https://www.zhihu.com/people/cnzyh || origin:知
+  zhihu: https://www.zhihu.com/people/cnzyh || origin:�?
   # wechat: yournumber || weixin
   # telegram: yournumber || telegram
   # qq: yournumber || qq
@@ -721,8 +721,8 @@ external_link:
 # The shortcuts of the site.
 shortcuts:
   # Switch to the prev / next post by key.
-  # "Ctrl + ←" is the shortcuts to prev post.
-  # "Ctrl + →" is the shortcuts to next post.
+  # "Ctrl + �?" is the shortcuts to prev post.
+  # "Ctrl + �?" is the shortcuts to next post.
   switch_post:
     enable: false
 

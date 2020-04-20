@@ -4,8 +4,9 @@
 
 # Site
 title: 阿洛的小塔
-subtitle: 'Do not pity me, I was born for this.'
-description: ''
+# subtitle: 'Do not pity me, I was born for this.'
+subtitle: '个人爱好收集'
+description: ""
 keywords:
 author: Clover
 language: zh-CN
