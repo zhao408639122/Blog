@@ -102,6 +102,7 @@ math: true
 $$
 B_i^n(t)=\begin{pmatrix}n \\i \end{pmatrix}t^i(1-t)^{n-i}
 $$
+
 所以贝塞尔曲线是对控制点的二次项多项式系数的加权
 
 **优点**：做仿射变换的时候可以直接对点再计算一边
