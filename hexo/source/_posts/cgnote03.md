@@ -99,6 +99,7 @@ math: true
 给定n+1个控制点——伯恩斯坦多项式
 
 <img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200417122245.png" alt="image-20200417102045899" style="zoom: 33%;" />
+
 $$
 B_i^n(t)=\begin{pmatrix}n \\i \end{pmatrix}t^i(1-t)^{n-i}
 $$
