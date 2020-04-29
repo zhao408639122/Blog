@@ -253,6 +253,7 @@ $$
 定义面：
 
 <img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200429225437.png" alt="image-20200429215459887" style="zoom:50%;" />
+
 $$
 \mathbf p:(\mathbf p - \mathbf p') \cdot \mathbf N = 0\\
 (\mathbf p - \mathbf p' ) \cdot \mathbf N = (\mathbf o + t\mathbf d - \mathbf p')
