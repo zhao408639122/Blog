@@ -105,6 +105,30 @@ QT引进了槽函数机制，
 
 
 
+### Qpainter
+
+QPainter用来绘制二维图案，QPainter中含有三个控件，分别为 **QPen，QBrush，QRect** ，分别用于控制边界，填充和图形。
+
+绘制可以适用于多种方式，可以使用QWidget，QPixmap，在使用构造函数时参数为所要作图的类，使用的时候需要重写 **paintEvent**，在构造时会自动绘制，之后每次调用 **update** 将会重新绘制一遍。
+
+```cpp
+class paintarea : public QWidget//重写Widget类来使用Painter绘图。
+{
+    Q_OBJECT
+public:
+    paintarea(QWidget *parent = nullptr);
+    void paintEvent(QPaintEvent *);
+    void paint();
+private:
+    QPen pen;
+    QBrush brush;
+    Qt::FillRule fillRule;
+};
+
+```
+
+
+
 ## 可视化设计
 
 ### layout

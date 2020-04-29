@@ -1,5 +1,5 @@
 ---
-title: Computer Graphic笔记(三)——几何
+title: Computer Graphic笔记(三)——几何与光追
 date: 2020-04-10 11:27:39
 tags:
 categories: 计算机图形学
@@ -140,6 +140,163 @@ Photoshop钢笔工具
 
 #### Mesh subdivision 曲面细分
 
+##### Loop Subdivision 
+
+和循环没有关系 loop是姓氏
+
+1. 将三角形数量增多(取三个中点连接)
+2. 调整位置，使得三角形更光滑
+
+<img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200429225326.png" alt="image-20200428202941198" style="zoom: 50%;" />
+
+对于新产生的点:
+
+<img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200429225342.png" alt="image-20200428203656010" style="zoom:33%;" />
+
+对于老的顶点:
+
+<img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200429225356.png" alt="image-20200428203719954" style="zoom:33%;" />
+
+##### Catmull-Clark Subdivision(General Mesh)
+
+用来处理一般的细分,Loop细分只能处理三角形网格的情况.
+
+定义非四边形面和奇异点(度不为4的点)
+
+<img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200429225406.png" alt="image-20200428204346073" style="zoom:50%;" />
+
+1. 每一条边取中点,面取中心点
+2. 调整点的位置
+
+可以发现在进行一次Catmull细分后,所有非四边形面将会变成四边形面,并引入相同数量的奇异点.
+
+更新方式:
+
+将点分为三类:
+
++ 对于面的中心点,对顶点平均
++ 对于边上的中点,对顶点和面中心点平均
++ 对于老的顶点,对老的点和新产生的点进行平均
+
+<img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200429225410.png" alt="image-20200428205231576" style="zoom:50%;" />
+
+
+
 #### Mesh simplification 曲面简化
 
+##### 边坍缩Edge collapsing
+
+使用**二次度量误差**，取到一个点使得到其他面距离最小。
+
+每次取出二次度量误差最小的边进行坍缩，更新其他的边，使用堆维护。
+
 #### Mesh Regulariization 网格规范化
+
+# Ray Tracing
+
+## Shadow Mapping（原式阴影生成方法）
+
+1. 从光源渲染光源所能看到的物体，记录深度
+2. 从摄像机出发，查询能看到的物体在光源深度图中的深度，如果深度与物体深度不一致，则有物体挡住光线。
+
+### Problems with shadow maps
+
+1. shadow map图分辨率不够造成走样
+2. 只能渲染点光源硬阴影，不能渲染软阴影
+
+<img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200429225415.png" alt="image-20200429094518730" style="zoom:50%;" />
+
+## Light Rays
+
+1. 光沿直线传播
+2. 光并不会发生碰撞（有一些错误）
+3. 光经过碰撞到达人的眼睛
+
+### Ray Casting 
+
+1. 从眼睛发出射线，找到最近的像素
+2. 与光源连线，查看是否能被照亮，进行着色，写回像素值
+
+## Whitted-Style Ray Tracing
+
+<img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200429225420.png" alt="image-20200429212622726" style="zoom: 67%;" />
+
+经过折射与反射的着色都会叠加在像素点上，模拟光线不断弹射的过程。
+
+### Ray-surface Intersection
+
+<img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200429225426.png" alt="image-20200429212924226" style="zoom: 80%;" />
+
+定义表示光线的射线
+$$
+\mathbf r(t) = \mathbf o + t \mathbf d \qquad 0 \leq t \leq \infty
+$$
+
+#### 光线与圆求交：
+
+<img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200429225429.png" alt="image-20200429213933233" style="zoom:67%;" />
+
+#### 光与隐式表面求交：
+
+$$
+\mathbf p:f( \mathbf p) = 0 \\
+f(\mathbf o + t \mathbf d) = 0
+$$
+
+求正实数解：
+
+<img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200429225434.png" alt="image-20200429214213479" style="zoom: 67%;" />
+
+#### 光线与面（三角形）求交：
+
+定义面：
+
+<img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200429225437.png" alt="image-20200429215459887" style="zoom:50%;" />
+$$
+\mathbf p:(\mathbf p - \mathbf p') \cdot \mathbf N = 0\\
+(\mathbf p - \mathbf p' ) \cdot \mathbf N = (\mathbf o + t\mathbf d - \mathbf p')
+\cdot \mathbf N = 0\\
+t = \frac {(\mathbf p' - \mathbf o) \cdot \mathbf N} {\mathbf d \cdot \mathbf N} \qquad \textbf{check:} \ 0 \leq t < \infty
+$$
+
+##### MT算法：
+
+因为可以用重心坐标表示三角形所在的平面，所以使用重心坐标列方程，方程可以直接用克拉默法则解：
+
+![image-20200429220317690](https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200429225441.png)
+
+$t,b_1,b_2 $ 都需要为正值。
+
+### 包围盒算法：
+
+用来加速光线与三角形的求交，如果光线碰触不到包围盒，则一定碰触不到三角形。
+
+使用 **AABB包围盒**，可以将长方体看作三个对面的交集。
+
+分别对每个面求出 $t_{min},t_{max}$ ，指进和出平面的时间。 
+
+对三组时间取交集
+$$
+t_{enter} = max\{t_{min}\},t_{exit} =  m in\{t_{max}\}
+$$
+<img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200429225448.png" alt="image-20200429224521716" style="zoom:67%;" />
+
+考虑负数情况：
+
++ $t_{exit} < 0$ ？
+
+  盒子在身后，无交集
+
++ $t_{exit} >= 0,t_{enter} < 0$ ？
+
+  点在盒子中，有交集。
+
+所以光线与AABB包围盒有交点的条件是当且仅当：
+$$
+t_{enter} < t_{exit} \&\&  \ t_{exit} >= 0
+$$
+使用AABB包围盒的原因（Axis-Aligned Bounding Volumes）
+
+<img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200429225455.png" alt="image-20200429225240546" style="zoom: 67%;" />
+
+简化运算。
