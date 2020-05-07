@@ -303,3 +303,45 @@ $$
 <img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200429225455.png" alt="image-20200429225240546" style="zoom: 67%;" />
 
 简化运算。
+
+###  利用盒子与光线求交加速
+
+#### Uniform grids
+
+将空间划分为均匀的格子，这样会造成格子太密集或者太稀疏都会造成效率低下
+
+<img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200507232058.png" alt="image-20200507213515216" style="zoom: 50%;" />
+
+经过启发式算法后可以得到一个较优的常数值来规范格子的大小。
+
+<img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200507232611.png" alt="image-20200507213626531" style="zoom:50%;" />
+
+空间物体分布不均也会造成效率低下的问题，就好像一个茶壶在一个运动场里，实际上均匀划分会造成效率的低下。
+
+Uniform Grids方法在今天的GPU的一些算法上仍会用到。
+
+#### Spatial Partitions
+
+<img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200507232128.png" alt="image-20200507213515216" style="zoom: 50%;" />
+
+空间不均匀划分使用八叉树、KD-Tree，BSP-Tree等算法
+
+##### KD-Tree的问题
+
+1. 判断一个三角形是否和盒子有交集十分麻烦，可能出现三个顶点都不在盒子内却相交的情况。
+2. 一个图元可能与许多包围盒有交集，一个图元需要存储多次。 
+
+#### Object Partition & Bounding Volume Hierarchy（BVH）
+
+基于物体的划分，现在最常用的方法。
+
+<img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200507232729.png" alt="image-20200507222320517" style="zoom:50%;" />
+
+将物体划分为两部分，重新求包围盒，一个物体最多存在于一个包围盒中。
+
+#####  划分节点的办法
+
++ 类似k-d Tree，每次选择一个维度划分
++ 启发式方法1：每次选择最长的一个维度划分
++ 启发式方法2：选择中间的三角形进行分割。
+
