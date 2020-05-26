@@ -162,6 +162,20 @@ $$
 \quad \textrm {Monte Carlo estimateor} \quad\quad F_N = \frac {b-a} N \displaystyle \sum_{i=1}^N {f(X_i)} \,
 $$
 
+**蒙特卡洛积分的推导*：**
+$$
+E[f(x) ] = \int_{x \in S} f(x)p(x)\mathrm dx \approx \frac 1 N \sum^N _{i=1}f(x^i) \\
+define \quad g = fp  \qquad \qquad \qquad \quad \qquad\\
+\int_{x\in S} g(x)\mathrm dx \approx \frac 1 N \sum _{i = 1} ^N \frac {g(x^i)} {p(x^i)} \qquad \qquad\\
+$$
+ 蒙特卡洛积分的期望为：
+$$
+E[\frac 1 N \sum _{i = 1} ^N \frac {g(x^i)} {p(x^i)}] = \frac 1 NE[ \sum _{i = 1} ^N \frac {g(x^i)} {p(x^i)}] \qquad\qquad\qquad \qquad\qquad\  \\
+=\frac 1 NN \times \int \frac {g(x)} {p(x)}p (x) \mathrm dx \\
+= \int g(x)\mathrm dx \qquad\qquad \quad \enspace
+$$
+
+
 ## Path Tracing
 
 <img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200514005655.png" alt="image-20200513224746264" style="zoom: 60%;" />
