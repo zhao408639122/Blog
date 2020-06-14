@@ -22,9 +22,11 @@ Shutter 快门，控制光在很微小的时间内进入相机
 # Field of view (FOV)
 
 <img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200522234529.png" alt="image-20200521230650193" style="zoom:50%;" />
+
 $$
 FOV = a \arctan(\frac h {2f})
 $$
+
 时长和焦距和传感器大小有关系，一般我们将传感器35mm格式，区分不同的焦距来定义视场
 
 + $17mm$ 是 $104^\circ$ 广角镜头

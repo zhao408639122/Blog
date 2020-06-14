@@ -91,23 +91,23 @@ M_{persp\rightarrow ortho}=
 n & 0 & 0 & 0\\
 0 & n & 0 & 0\\
 0 & 0 & n + f & -nf\\
-0 & 0 & z & 0
+0 & 0 & 1 & 0
 \end{bmatrix}
 $$
 
-#### $M_{persp\rightarrow ortho}$的推导
+$M_{persp\rightarrow ortho}$**的推导**
 
 首先在视锥变换的过程中容易得到
 $$
 \qquad y' =\frac n z y,\;x'=\frac n z x\\
  \begin{pmatrix}x\\y\\z\\1 \end{pmatrix} \implies 
  \begin{pmatrix}nx/z\\ny/z\\unknown\\1 \end{pmatrix} * z = 
- \begin{pmatrix}nx\\ny\\still unknown\\z \end{pmatrix} \\
+ \begin{pmatrix}nx\\ny\\still\  unknown\\z \end{pmatrix} \\
  \implies M_{persp\rightarrow ortho} = \begin{pmatrix} n & 0 & 0 & 0 \\ 0 & n & 0 & 0 \\ ? & ? & ? & ? \\ 0 & 0 & 1 & 0 \end{pmatrix}\\
 $$
 因为近平面的上点在进行变换时z不变，用n代替z，容易推断，n与x、y无关
 $$
- \begin{pmatrix} x\\y\\n\\1  \end{pmatrix} == \begin{pmatrix} nx\\ny\\n^2\\n\end{pmatrix}\implies \begin{pmatrix}0 & 0 & A & B \end{pmatrix}
+\begin{pmatrix} x\\y\\n\\1  \end{pmatrix} == \begin{pmatrix} nx\\ny\\n^2\\n\end{pmatrix}\implies \begin{pmatrix}0 & 0 & A & B \end{pmatrix}
 \begin{pmatrix}x\\y\\n\\1 \end{pmatrix} = n^2 \implies An + B = n^2\\
 $$
 取原平面的中心，注意在压缩的过程中，原平面中心的z值是不变的所以有
@@ -134,11 +134,124 @@ M_{persp\rightarrow ortho}=
 n & 0 & 0 & 0\\
 0 & n & 0 & 0\\
 0 & 0 & n + f & -nf\\
-0 & 0 & z & 0
+0 & 0 & 1 & 0
 \end{bmatrix}
 $$
 
+#### 实际程序中的计算
 
+程序中一般求投影矩阵需要求四个参数 **eye_fov, aspect_ratio, zNear, zFar** .
+
++ eye_fov 就是眼睛所能看到的角度
++ aspect_ratio 是宽高比
++ zNear，zFar分别是视锥近平面与原平面的z值
+
+首先由
+$$
+\tan(\theta/ 2) = H / 2n \\
+ar = W/H
+$$
+W与H是屏幕的宽与高，得到
+$$
+H = 2n \cdot \tan (\theta / 2) \\
+W = 2n\cdot \tan(\theta /2 ) * ar
+$$
+现在计算投影矩阵
+$$
+M_{perp} = M_{ortho} M_{persp \to ortho} \qquad \qquad \qquad \qquad\qquad\qquad\qquad\qquad\qquad\\ 
+\qquad\qquad\quad\ \ =
+\begin{bmatrix}
+\frac 2 {r - l} & 0 & 0 & 0 \\
+0 & \frac 2 {t - b} & 0 & 0 \\
+0 & 0 & \frac 2 {n - f} & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & -\frac {r + l} 2\\
+0 & 1 & 0 & -\frac {t + b} 2\\
+0 & 0 & 1 & -\frac {n + f} 2\\
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+n & 0 & 0 & 0\\
+0 & n & 0 & 0 \\
+0 & 0 & n + f & -nf \\
+0 & 0 & 1 & 0
+\end{bmatrix} \\
+= 
+\begin{bmatrix}
+\frac 2 {r - l} & 0 & 0 & -\frac {r + l} {r - l} \\
+0 & \frac 2 {t - b} & 0 & -\frac {t + b} {t - b} \\
+0 & 0 & \frac 2 {n - f} & -\frac {n + f} {n - f} \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+n & 0 & 0 & 0\\
+0 & n & 0 & 0 \\
+0 & 0 & n + f & -nf \\
+0 & 0 & 1 & 0
+\end{bmatrix} \quad 
+\\
+=
+\begin{bmatrix}
+\frac {2n} {r - l} & 0 & 0 & 0 \\
+0 & \frac {2n} {t - b} & 0 & 0 \\
+0 & 0 & \frac {n + f} {n - f} & \frac {-2nf} {n - f} \\
+0 & 0 & 1 & 0
+\end{bmatrix} \qquad\qquad\qquad\qquad\qquad\quad\ \
+$$
+
+
+因为
+$$
+W = r -l\\
+H = t - b
+$$
+将其带入上式可得
+$$
+M_{perp} = 
+\begin{bmatrix}
+\frac 1 {ar * \tan(fov / 2)} & 0 & 0 & 0 \\
+0 & \frac 1 {\tan(fov  / 2)} & 0  & 0 \\
+0 & 0 & \frac {n + f} {n - f} & \frac {-2nf} {n - f} \\
+0 & 0 & 1 & 0
+\end{bmatrix}
+$$
+
+### *Viewport Transform 视口变换
+
+视口变换是将NDC坐标（（-1， 1）的立方体）转换为显示屏幕坐标的过程
+
+ <img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200606203905.png" alt="image-20200606203837990" style="zoom:67%;" />
+
+视口变换中线性映射关系为：
+$$
+(-1, s_x), (1, s_x + w _ s)\\
+(-1, s_y), (1, s_y + h _s) \\
+(-1, n _ s), (1, f_s)
+$$
+所以可以求得
+$$
+x_s = \frac {w_s} 2(x_n + 1) + s_x\\
+y_s = \frac {h_s} 2(y_n + 1) + s_y\\
+\qquad \ z_s = \frac {f_s - n_s} 2 z_n + \frac {n_s + f_s} 2
+$$
+可以由上式做出视口变换的矩阵
+
+### 法线变换
+
+简单距离就可以法线，法线与顶点的变换不相同，变换矩阵相同是，法线与切线向量并不垂直，设切线向量为 T，法线向量为 N，顶点变换矩阵为 M，法线变换矩阵为 G
+$$
+T' = MT,N' = GN\\
+T^TN = 0, \ T'^TN' = 0 \\
+\implies (MT)^T(GN) = 0 \\
+\qquad \quad \enspace \   T^TM^TGN = 0  \\
+\implies M^TG = 1 \qquad \quad   \\
+G = (M^T)^-1
+$$
+所以法线向量的变换矩阵是顶点变换矩阵的逆转置矩阵。
+
+不一定非要求逆矩阵，可以使用求伴随矩阵或者逆操作等方法对计算进行优化。
 
 
 ## Rasterization
@@ -161,9 +274,10 @@ frustum（视锥）的定义：宽高比、垂直/水平可视角度
 
 <img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200320174414.png" alt="image-20200320172128474" style="zoom: 40%;" />
 $$
-Evaluate \quad \overrightarrow{P_1Q}\times\overrightarrow{P_1P_2}\\  \overrightarrow{P_2Q}\times\overrightarrow{P_2P_0}\\
+Evaluate \quad \overrightarrow{P_1Q}\times\overrightarrow{P_1P_2}  \qquad \qquad\quad\\  \overrightarrow{P_2Q}\times\overrightarrow{P_2P_0}\\
 \overrightarrow{P_0Q}\times\overrightarrow{P_0P_1}
 $$
+
 若三次叉乘符号一致，则Q在三角形内部
 
 ####  减少运算——Bounding Box

@@ -17,6 +17,8 @@ tags:
 
 一系列连接着的弹簧和质点。
 
+<!-- more -->
+
 ![image-20200526203458567](https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200526235318.png)
 
 **胡克定律：**
@@ -28,8 +30,6 @@ $$
 但是引入摩擦力只能描述外部的力，如果两个质点相对弹簧静止的运动，则也没有能量损耗。
 
 所以引入对b的摩擦 力。
-
-<!-- more -->
 
 <img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200526235323.png" alt="image-20200526204403882" style="zoom:67%;" />
 
@@ -137,7 +137,6 @@ $$
 每次进行欧拉方法时，取步长的中点，在出发点应用中点的速度，得出计算出的位置，作为一次欧拉布。
 
 <img src="https://raw.githubusercontent.com/zhao408639122/Picbed/master/blog/20200526235429.png" alt="image-20200526221313707" style="zoom: 50%;" />
-
 $$
 x_{mid}= x(t)+\Delta t /2\cdot v(x(t), t) \\
 x(t + \Delta t) = x(t) + \Delta t \cdot v(x _{mid}, t)
